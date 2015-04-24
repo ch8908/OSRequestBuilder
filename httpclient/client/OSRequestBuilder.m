@@ -194,6 +194,14 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     return self;
 }
 
+- (OSRequestable *) buildModel:(Class) modelClass {
+    return [self buildWithModel:modelClass isArray:NO];
+}
+
+- (OSRequestable *) buildModels:(Class) modelClass {
+    return [self buildWithModel:modelClass isArray:YES];
+}
+
 - (OSRequestable *) buildWithModel:(Class) modelClass isArray:(BOOL) isArray {
     self.modelClass = modelClass;
 

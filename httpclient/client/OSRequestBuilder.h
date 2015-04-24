@@ -48,6 +48,7 @@
 
 - (OSRequestBuilder *) addHeader:(NSDictionary *) header;
 
-- (OSRequestable *) buildWithModel:(Class) modelClass isArray:(BOOL) isArray;
+- (OSRequestable *) buildModel:(Class) modelClass;
 
+- (OSRequestable *) buildModels:(Class) modelClass;
 @end

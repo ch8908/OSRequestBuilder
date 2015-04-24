@@ -24,7 +24,7 @@
 
 - (BFTask *) fetchBanner {
     OSRequestBuilder *builder = [self.apiClient.builder.withGet withPath:@"/v1/banners.json"];
-    return [[builder buildWithModel:[OSRawDataType class] isArray:YES] request];
+    return [[builder buildModel:[OSRawDataType class]] request];
 }
 
 - (BFTask *) createDevice {
@@ -32,7 +32,7 @@
     [builder addParam:@"device_id" value:@"asdfaxcvzxcv"];
     [builder addParam:@"platform" value:@"ios"];
     [builder addParam:@"app_version" value:@"0.0.1"];
-    return [[builder buildWithModel:[OSRawDataType class] isArray:YES] request];
+    return [[builder buildModel:OSRawDataType.class] request];
 }
 
 @end
