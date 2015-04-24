@@ -14,6 +14,15 @@
 		19682E5B1AD67E7300CC67BE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19682E5A1AD67E7300CC67BE /* Images.xcassets */; };
 		19682E5E1AD67E7300CC67BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19682E5C1AD67E7300CC67BE /* LaunchScreen.xib */; };
 		19682E6A1AD67E7300CC67BE /* httpclientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19682E691AD67E7300CC67BE /* httpclientTests.m */; };
+		23D1A12C1140CF654BAAA77C /* WEApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */; };
+		23D1A2036F0C510FD7F50CFF /* WEApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEApiService.m */; };
+		23D1A335FA99B5BF50BEFBE3 /* WEApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */; };
+		23D1A600D937B6DB648061C0 /* OSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */; };
+		23D1A60FC8051285A6B11D7D /* OSRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */; };
+		23D1A616E1B7C6BF6A583E29 /* OSRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */; };
+		23D1AA437076458C19110DBC /* OSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */; };
+		23D1AAC97B28555730E2AF63 /* WEApiService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEApiService.m */; };
+		AAC3ABF382E6A3CFCDB2EDE1 /* libPods-httpclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7E851DAD6C6ABA2A91A868 /* libPods-httpclient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +49,17 @@
 		19682E631AD67E7300CC67BE /* httpclientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = httpclientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19682E681AD67E7300CC67BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19682E691AD67E7300CC67BE /* httpclientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = httpclientTests.m; sourceTree = "<group>"; };
+		23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEApiClient.m; sourceTree = "<group>"; };
+		23D1A30771B6E88717623690 /* WEApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEApiClient.h; sourceTree = "<group>"; };
+		23D1A52FCD167F67BB52D9D7 /* OSHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSHttpClient.h; sourceTree = "<group>"; };
+		23D1A5D901B2A54BDD59D5CB /* WEApiService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEApiService.m; sourceTree = "<group>"; };
+		23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSRequestBuilder.m; sourceTree = "<group>"; };
+		23D1AB61B21C1D69239D891A /* WEApiService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEApiService.h; sourceTree = "<group>"; };
+		23D1AEB228023CB6AA4043C9 /* OSRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSRequestBuilder.h; sourceTree = "<group>"; };
+		23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHttpClient.m; sourceTree = "<group>"; };
+		9E7E851DAD6C6ABA2A91A868 /* libPods-httpclient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-httpclient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFD2A18F9D9B474157588032 /* Pods-httpclient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-httpclient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-httpclient/Pods-httpclient.debug.xcconfig"; sourceTree = "<group>"; };
+		D6AA3C1FF163849A8B4065F9 /* Pods-httpclient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-httpclient.release.xcconfig"; path = "Pods/Target Support Files/Pods-httpclient/Pods-httpclient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAC3ABF382E6A3CFCDB2EDE1 /* libPods-httpclient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +87,8 @@
 				19682E4C1AD67E7200CC67BE /* httpclient */,
 				19682E661AD67E7300CC67BE /* httpclientTests */,
 				19682E4B1AD67E7200CC67BE /* Products */,
+				FA0B758CDC7F44E9DC3E492F /* Pods */,
+				68817AFD877AB96F94515592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +112,11 @@
 				19682E5A1AD67E7300CC67BE /* Images.xcassets */,
 				19682E5C1AD67E7300CC67BE /* LaunchScreen.xib */,
 				19682E4D1AD67E7200CC67BE /* Supporting Files */,
+				23D1ABF5BA53288F1DAD73B3 /* client */,
+				23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */,
+				23D1A30771B6E88717623690 /* WEApiClient.h */,
+				23D1A5D901B2A54BDD59D5CB /* WEApiService.m */,
+				23D1AB61B21C1D69239D891A /* WEApiService.h */,
 			);
 			path = httpclient;
 			sourceTree = "<group>";
@@ -119,6 +147,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		23D1ABF5BA53288F1DAD73B3 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */,
+				23D1AEB228023CB6AA4043C9 /* OSRequestBuilder.h */,
+				23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */,
+				23D1A52FCD167F67BB52D9D7 /* OSHttpClient.h */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		68817AFD877AB96F94515592 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E7E851DAD6C6ABA2A91A868 /* libPods-httpclient.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA0B758CDC7F44E9DC3E492F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CFD2A18F9D9B474157588032 /* Pods-httpclient.debug.xcconfig */,
+				D6AA3C1FF163849A8B4065F9 /* Pods-httpclient.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +182,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19682E6D1AD67E7300CC67BE /* Build configuration list for PBXNativeTarget "httpclient" */;
 			buildPhases = (
+				86D5F4F245E1E9AC32F5194A /* Check Pods Manifest.lock */,
 				19682E461AD67E7200CC67BE /* Sources */,
 				19682E471AD67E7200CC67BE /* Frameworks */,
 				19682E481AD67E7200CC67BE /* Resources */,
+				E6A0C8D3EFC2F71064597FEB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -214,6 +272,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		86D5F4F245E1E9AC32F5194A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A0C8D3EFC2F71064597FEB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-httpclient/Pods-httpclient-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		19682E461AD67E7200CC67BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -222,6 +313,10 @@
 				19682E561AD67E7300CC67BE /* ViewController.m in Sources */,
 				19682E531AD67E7300CC67BE /* AppDelegate.m in Sources */,
 				19682E501AD67E7300CC67BE /* main.m in Sources */,
+				23D1A60FC8051285A6B11D7D /* OSRequestBuilder.m in Sources */,
+				23D1A600D937B6DB648061C0 /* OSHttpClient.m in Sources */,
+				23D1A335FA99B5BF50BEFBE3 /* WEApiClient.m in Sources */,
+				23D1A2036F0C510FD7F50CFF /* WEApiService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +325,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				19682E6A1AD67E7300CC67BE /* httpclientTests.m in Sources */,
+				23D1A616E1B7C6BF6A583E29 /* OSRequestBuilder.m in Sources */,
+				23D1AA437076458C19110DBC /* OSHttpClient.m in Sources */,
+				23D1A12C1140CF654BAAA77C /* WEApiClient.m in Sources */,
+				23D1AAC97B28555730E2AF63 /* WEApiService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,26 +440,31 @@
 		};
 		19682E6E1AD67E7300CC67BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD2A18F9D9B474157588032 /* Pods-httpclient.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = httpclient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Debug;
 		};
 		19682E6F1AD67E7300CC67BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6AA3C1FF163849A8B4065F9 /* Pods-httpclient.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = httpclient/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"${PROJECT_DIR}/Pods\"/**";
 			};
 			name = Release;
 		};
 		19682E711AD67E7300CC67BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFD2A18F9D9B474157588032 /* Pods-httpclient.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,6 +516,7 @@
 				19682E6F1AD67E7300CC67BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19682E701AD67E7300CC67BE /* Build configuration list for PBXNativeTarget "httpclientTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +525,7 @@
 				19682E721AD67E7300CC67BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
