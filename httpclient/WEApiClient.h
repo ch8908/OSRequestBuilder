@@ -18,4 +18,5 @@
 - (void) setDeviceId:(NSString *) deviceId;
 
 - (OSRequestBuilder *) builder;
+
 @end
