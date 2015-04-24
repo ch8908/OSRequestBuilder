@@ -7,9 +7,11 @@
 
 @class BFTask;
 
+// No Return value
 @interface OSVoidType : NSObject
 @end
 
+// Do not decode, return raw data
 @interface OSRawDataType : NSObject
 @end
 
@@ -20,11 +22,21 @@
 @interface OSRequestBuilder : NSObject
 - (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseURLString:(NSString *) baseURLString;
 
+- (OSRequestBuilder *) withOptions;
+
 - (OSRequestBuilder *) withGet;
+
+- (OSRequestBuilder *) withHead;
 
 - (OSRequestBuilder *) withPost;
 
 - (OSRequestBuilder *) withDelete;
+
+- (OSRequestBuilder *) withTrace;
+
+- (OSRequestBuilder *) withConnect;
+
+- (OSRequestBuilder *) withPut;
 
 - (OSRequestBuilder *) withPatch;
 

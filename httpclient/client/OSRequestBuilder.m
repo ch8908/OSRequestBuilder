@@ -116,8 +116,18 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     return self;
 }
 
+- (OSRequestBuilder *) withOptions {
+    self.method = @"OPTIONS";
+    return self;
+}
+
 - (OSRequestBuilder *) withGet {
     self.method = @"GET";
+    return self;
+}
+
+- (OSRequestBuilder *) withHead {
+    self.method = @"HEAD";
     return self;
 }
 
@@ -126,13 +136,28 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     return self;
 }
 
-- (OSRequestBuilder *) withDelete {
-    self.method = @"DELETE";
+- (OSRequestBuilder *) withPut {
+    self.method = @"PUT";
     return self;
 }
 
 - (OSRequestBuilder *) withPatch {
     self.method = @"PATCH";
+    return self;
+}
+
+- (OSRequestBuilder *) withDelete {
+    self.method = @"DELETE";
+    return self;
+}
+
+- (OSRequestBuilder *) withTrace {
+    self.method = @"TRACE";
+    return self;
+}
+
+- (OSRequestBuilder *) withConnect {
+    self.method = @"CONNECT";
     return self;
 }
 
