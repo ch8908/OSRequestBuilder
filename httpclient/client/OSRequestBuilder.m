@@ -9,7 +9,6 @@
 #import "MTLJSONAdapter.h"
 #import "OSRequestBuilder.h"
 #import "BFTaskCompletionSource.h"
-#import "MTLModel.h"
 
 static NSString *kRequestResponseObjectKey = @"kRequestResponseObjectKey";
 NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
