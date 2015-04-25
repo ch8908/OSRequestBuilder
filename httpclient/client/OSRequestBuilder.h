@@ -51,4 +51,14 @@
 - (OSRequestable *) buildModel:(Class) modelClass;
 
 - (OSRequestable *) buildModels:(Class) modelClass;
+
+- (OSRequestBuilder *(^)(NSString *key, NSString *value)) addParam;
+
+- (OSRequestBuilder *(^)(NSDictionary *header)) addHeader;
+
+- (OSRequestBuilder *(^)(NSString *path)) withPath;
+
+- (OSRequestable *(^)(Class modelCls)) buildModel;
+
+- (OSRequestable *(^)(Class modelCls)) buildModels;
 @end

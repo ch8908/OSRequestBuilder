@@ -9,6 +9,7 @@
 #import "MTLJSONAdapter.h"
 #import "OSRequestBuilder.h"
 #import "BFTaskCompletionSource.h"
+#import "MTLModel.h"
 
 static NSString *kRequestResponseObjectKey = @"kRequestResponseObjectKey";
 NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -47,15 +48,21 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     [requestOperation.responseSerializer setStringEncoding:NSUTF8StringEncoding];
     [requestOperation
       setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-          DDLogInfo(@"Request Builder:%@, URL:%@, Body:%@, responseObject:%@", self.urlRequest.HTTPMethod, [self.urlRequest URL], [self convertHttpBodyToString:self.urlRequest.HTTPBody], responseObject);
-          if ([self.modelClass isKindOfClass:[OSVoidType class]]) {
+          DDLogInfo(@"Request Builder:%@, URL:%@, Body:%@, Model:%@, responseObject:%@", self.urlRequest.HTTPMethod, [self.urlRequest URL], [self convertHttpBodyToString:self.urlRequest.HTTPBody], self.modelClass, responseObject);
+          if ([self.modelClass isSubclassOfClass:[OSVoidType class]]) {
               [_tcs setResult:nil];
               return;
           }
-          if (![self.modelClass isKindOfClass:[OSRawDataType class]]) {
+
+          if ([self.modelClass isSubclassOfClass:[OSRawDataType class]]) {
               [_tcs setResult:responseObject];
               return;
           }
+
+          if (![self.modelClass isSubclassOfClass:[MTLModel class]]) {
+              NSAssert(false, @"model class must be one of OSVoidType, OSRawDataType or subclass of MTLModel");
+          }
+
           if (self.isArray) {
               NSArray *array = [MTLJSONAdapter modelsOfClass:self.modelClass fromJSONArray:responseObject
                                                        error:nil];
@@ -69,7 +76,7 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
         id data = error.userInfo[@"com.alamofire.serialization.response.error.data"];
         NSString *errorMessage = [[NSString alloc] initWithData:data
                                                        encoding:NSUTF8StringEncoding];
-        DDLogInfo(@"Request Builder Failed:%@, URL:%@, Body:%@, Error:%@", self.urlRequest.HTTPMethod, [self.urlRequest URL], [self convertHttpBodyToString:self.urlRequest.HTTPBody], error);
+        DDLogInfo(@"Request Builder Failed:%@, URL:%@, Body:%@, Model:%@, Error:%@", self.urlRequest.HTTPMethod, [self.urlRequest URL], [self convertHttpBodyToString:self.urlRequest.HTTPBody], self.modelClass, error);
         DDLogInfo(@"decode error message:%@", errorMessage);
         [_tcs setError:[self getPatchedError:operation error:error]];
     }];
@@ -188,7 +195,6 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
 - (OSRequestBuilder *) addHeader:(NSDictionary *) header {
     if (!self.header) {
         self.header = [NSMutableDictionary dictionary];
-        return self;
     }
     [self.header addEntriesFromDictionary:header];
     return self;
@@ -200,6 +206,48 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (OSRequestable *) buildModels:(Class) modelClass {
     return [self buildWithModel:modelClass isArray:YES];
+}
+
+- (OSRequestBuilder *(^)(NSDictionary *header)) addHeader {
+    return ^OSRequestBuilder *(NSDictionary *header) {
+        if (!self.header) {
+            self.header = [NSMutableDictionary dictionary];
+        }
+        [self.header addEntriesFromDictionary:header];
+        return self;
+    };
+}
+
+- (OSRequestBuilder *(^)(NSString *key, NSString *value)) addParam {
+    return ^OSRequestBuilder *(NSString *key, NSString *value) {
+        NSAssert(key, @"param key can not be nil");
+        NSAssert(value, @"param value can not be nil");
+        if (!self.params) {
+            self.params = [NSMutableDictionary dictionary];
+        }
+        self.params[key] = value;
+        return self;
+    };
+}
+
+- (OSRequestBuilder *(^)(NSString *)) withPath {
+    return ^OSRequestBuilder *(NSString *path) {
+        NSAssert([path characterAtIndex:0] == '/', @"path must be start with '/'");
+        self.path = path;
+        return self;
+    };
+}
+
+- (OSRequestable *(^)(Class modelCls)) buildModel {
+    return ^OSRequestable *(Class modelCls) {
+        return [self buildWithModel:modelCls isArray:NO];
+    };
+}
+
+- (OSRequestable *(^)(Class modelCls)) buildModels {
+    return ^OSRequestable *(Class modelCls) {
+        return [self buildWithModel:modelCls isArray:YES];
+    };
 }
 
 - (OSRequestable *) buildWithModel:(Class) modelClass isArray:(BOOL) isArray {
