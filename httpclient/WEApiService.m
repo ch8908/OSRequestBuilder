@@ -28,11 +28,21 @@
 }
 
 - (BFTask *) createDevice {
-    OSRequestBuilder *builder = [self.apiClient.builder.withPost withPath:@"/v1/devices.json"];
-    [builder addParam:@"device_id" value:@"asdfaxcvzxcv"];
-    [builder addParam:@"platform" value:@"ios"];
-    [builder addParam:@"app_version" value:@"0.0.1"];
-    return [[builder buildModel:OSRawDataType.class] request];
+    OSRequestBuilder *builder = self.apiClient.builder;
+    builder.withPost
+           .withPath(@"/v1/devices.json")
+           .addParam(@"device_id", @"asdfaxcvzxcv")
+           .addParam(@"platform", @"ios");
+    if (YES) {
+        builder.addParam(@"app_version", @"0.0.1");
+    }
+    return builder.buildModel([OSRawDataType class]).request;
+
+//    OSRequestBuilder *builder = [self.apiClient.builder.withPost withPath:@"/v1/devices.json"];
+//    [builder addParam:@"device_id" value:@"asdfaxcvzxcv"];
+//    [builder addParam:@"platform" value:@"ios"];
+//    [builder addParam:@"app_version" value:@"0.0.1"];
+//    return [[builder buildModel:OSRawDataType.class] request];
 }
 
 @end

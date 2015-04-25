@@ -55,10 +55,10 @@
 }
 
 - (void) request:(id) request {
-    [[self.apiService fetchBanner] continueWithBlock:^id(BFTask *task) {
-        NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
-        return nil;
-    }];
+//    [[self.apiService fetchBanner] continueWithBlock:^id(BFTask *task) {
+//        NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
+//        return nil;
+//    }];
 
     [[self.apiService createDevice] continueWithBlock:^id(BFTask *task) {
         NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
