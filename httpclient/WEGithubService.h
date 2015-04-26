@@ -9,10 +9,8 @@
 @class BFTask;
 
 
-@interface WEApiService : NSObject
+@interface WEGithubService : NSObject
 - (instancetype) initWithApiClient:(WEApiClient *) apiClient;
 
-- (BFTask *) fetchBanner;
-
-- (BFTask *) createDevice;
+- (BFTask *) fetchRepos;
 @end

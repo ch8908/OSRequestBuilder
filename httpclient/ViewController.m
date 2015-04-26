@@ -10,12 +10,12 @@
 #import "ViewController.h"
 #import "WEApiClient.h"
 #import "OSHttpClient.h"
-#import "WEApiService.h"
+#import "WEGithubService.h"
 
 @interface ViewController()
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
-@property (nonatomic, strong) WEApiService *apiService;
+@property (nonatomic, strong) WEGithubService *apiService;
 @end
 
 @implementation ViewController
@@ -47,11 +47,9 @@
 
     self.operationQueue = operationQueue;
     OSHttpClient *client = [[OSHttpClient alloc] initWithQueue:self.operationQueue
-                                                 baseURLString:@"http://123.57.206.216/api"];
+                                                 baseURLString:@"https://api.github.com"];
     WEApiClient *apiClient = [[WEApiClient alloc] initWithHttpClient:client];
-    [apiClient setDeviceId:@"wwqqasssdeviceIdddd"];
-    [apiClient setAuthToken:@"authtoken"];
-    self.apiService = [[WEApiService alloc] initWithApiClient:apiClient];
+    self.apiService = [[WEGithubService alloc] initWithApiClient:apiClient];
 }
 
 - (void) request:(id) request {
@@ -60,7 +58,7 @@
 //        return nil;
 //    }];
 
-    [[self.apiService createDevice] continueWithBlock:^id(BFTask *task) {
+    [[self.apiService fetchRepos] continueWithBlock:^id(BFTask *task) {
         NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
         return nil;
     }];
