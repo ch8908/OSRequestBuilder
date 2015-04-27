@@ -10,12 +10,12 @@
 #import "ViewController.h"
 #import "WEApiClient.h"
 #import "OSHttpClient.h"
-#import "WEGithubService.h"
+#import "WEGitHubService.h"
 
 @interface ViewController()
 
 @property (nonatomic, strong) NSOperationQueue *operationQueue;
-@property (nonatomic, strong) WEGithubService *apiService;
+@property (nonatomic, strong) WEGitHubService *apiService;
 @end
 
 @implementation ViewController
@@ -49,15 +49,10 @@
     OSHttpClient *client = [[OSHttpClient alloc] initWithQueue:self.operationQueue
                                                  baseURLString:@"https://api.github.com"];
     WEApiClient *apiClient = [[WEApiClient alloc] initWithHttpClient:client];
-    self.apiService = [[WEGithubService alloc] initWithApiClient:apiClient];
+    self.apiService = [[WEGitHubService alloc] initWithApiClient:apiClient];
 }
 
 - (void) request:(id) request {
-//    [[self.apiService fetchBanner] continueWithBlock:^id(BFTask *task) {
-//        NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
-//        return nil;
-//    }];
-
     [[self.apiService fetchRepos] continueWithBlock:^id(BFTask *task) {
         NSLog(@">>>>>>>>>>>> task.result = %@", task.result);
         return nil;

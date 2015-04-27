@@ -230,6 +230,17 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     };
 }
 
+- (OSRequestBuilder *(^)(NSDictionary *params)) addParams {
+    return ^OSRequestBuilder *(NSDictionary *params) {
+        NSAssert(params, @"add params can not be nil");
+        if (!self.params) {
+            self.params = [NSMutableDictionary dictionary];
+        }
+        [self.params addEntriesFromDictionary:params];
+        return self;
+    };
+}
+
 - (OSRequestBuilder *(^)(NSString *)) withPath {
     return ^OSRequestBuilder *(NSString *path) {
         NSAssert([path characterAtIndex:0] == '/', @"path must be start with '/'");

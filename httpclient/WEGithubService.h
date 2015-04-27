@@ -9,7 +9,7 @@
 @class BFTask;
 
 
-@interface WEGithubService : NSObject
+@interface WEGitHubService : NSObject
 - (instancetype) initWithApiClient:(WEApiClient *) apiClient;
 
 - (BFTask *) fetchRepos;

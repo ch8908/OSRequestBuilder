@@ -36,10 +36,10 @@
 - (OSRequestBuilder *) builder {
     OSRequestBuilder *builder = [self.httpClient builder];
     if (_authToken) {
-        [builder addParam:@"authentication_token" value:_authToken];
+        builder.addParam(@"authentication_token", _authToken);
     }
     if (_deviceId) {
-        [builder addParam:@"device_id" value:_deviceId];
+        builder.addParam(@"device_id", _deviceId);
     }
     return builder;
 }

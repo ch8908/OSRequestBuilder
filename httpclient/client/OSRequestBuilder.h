@@ -7,7 +7,7 @@
 
 @class BFTask;
 
-// No Return value
+// Has No Return value
 @interface OSVoidType : NSObject
 @end
 
@@ -40,23 +40,13 @@
 
 - (OSRequestBuilder *) withPatch;
 
-- (OSRequestBuilder *) withPath:(NSString *) path;
-
-- (OSRequestBuilder *) addParam:(NSString *) key value:(NSString *) value;
-
-- (OSRequestBuilder *) addParams:(NSDictionary *) params;
-
-- (OSRequestBuilder *) addHeader:(NSDictionary *) header;
-
-- (OSRequestable *) buildModel:(Class) modelClass;
-
-- (OSRequestable *) buildModels:(Class) modelClass;
-
-- (OSRequestBuilder *(^)(NSString *key, NSString *value)) addParam;
+- (OSRequestBuilder *(^)(NSString *path)) withPath;
 
 - (OSRequestBuilder *(^)(NSDictionary *header)) addHeader;
 
-- (OSRequestBuilder *(^)(NSString *path)) withPath;
+- (OSRequestBuilder *(^)(NSString *key, NSString *value)) addParam;
+
+- (OSRequestBuilder *(^)(NSDictionary *params)) addParams;
 
 - (OSRequestable *(^)(Class modelCls)) buildModel;
 
