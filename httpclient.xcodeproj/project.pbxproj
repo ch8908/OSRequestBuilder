@@ -15,14 +15,14 @@
 		19682E5E1AD67E7300CC67BE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19682E5C1AD67E7300CC67BE /* LaunchScreen.xib */; };
 		19682E6A1AD67E7300CC67BE /* httpclientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19682E691AD67E7300CC67BE /* httpclientTests.m */; };
 		23D1A12C1140CF654BAAA77C /* WEApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */; };
-		23D1A2036F0C510FD7F50CFF /* WEGitHubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEGitHubService.m */; };
+		23D1A2036F0C510FD7F50CFF /* WEGithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEGithubService.m */; };
 		23D1A335FA99B5BF50BEFBE3 /* WEApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */; };
 		23D1A4EB7E50EFE01C464385 /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A46CD8BE0F87EE6C8AA3 /* Repo.m */; };
 		23D1A600D937B6DB648061C0 /* OSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */; };
 		23D1A60FC8051285A6B11D7D /* OSRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */; };
 		23D1A616E1B7C6BF6A583E29 /* OSRequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */; };
 		23D1AA437076458C19110DBC /* OSHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */; };
-		23D1AAC97B28555730E2AF63 /* WEGitHubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEGitHubService.m */; };
+		23D1AAC97B28555730E2AF63 /* WEGithubService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A5D901B2A54BDD59D5CB /* WEGithubService.m */; };
 		23D1AE315EA60682ED25A988 /* Repo.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1A46CD8BE0F87EE6C8AA3 /* Repo.m */; };
 		AAC3ABF382E6A3CFCDB2EDE1 /* libPods-httpclient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7E851DAD6C6ABA2A91A868 /* libPods-httpclient.a */; };
 /* End PBXBuildFile section */
@@ -55,10 +55,10 @@
 		23D1A30771B6E88717623690 /* WEApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEApiClient.h; sourceTree = "<group>"; };
 		23D1A46CD8BE0F87EE6C8AA3 /* Repo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repo.m; sourceTree = "<group>"; };
 		23D1A52FCD167F67BB52D9D7 /* OSHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSHttpClient.h; sourceTree = "<group>"; };
-		23D1A5D901B2A54BDD59D5CB /* WEGitHubService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEGitHubService.m; sourceTree = "<group>"; };
+		23D1A5D901B2A54BDD59D5CB /* WEGithubService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WEGithubService.m; sourceTree = "<group>"; };
 		23D1A84DFAB5A76C6AC47D05 /* OSRequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSRequestBuilder.m; sourceTree = "<group>"; };
 		23D1A91564735D0D2F116895 /* Repo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repo.h; sourceTree = "<group>"; };
-		23D1AB61B21C1D69239D891A /* WEGitHubService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEGitHubService.h; sourceTree = "<group>"; };
+		23D1AB61B21C1D69239D891A /* WEGithubService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WEGithubService.h; sourceTree = "<group>"; };
 		23D1AEB228023CB6AA4043C9 /* OSRequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSRequestBuilder.h; sourceTree = "<group>"; };
 		23D1AF06BF32529DD2EF21CA /* OSHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSHttpClient.m; sourceTree = "<group>"; };
 		9E7E851DAD6C6ABA2A91A868 /* libPods-httpclient.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-httpclient.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +119,8 @@
 				23D1ABF5BA53288F1DAD73B3 /* client */,
 				23D1A2F7B6BBF0C7B8989BFF /* WEApiClient.m */,
 				23D1A30771B6E88717623690 /* WEApiClient.h */,
-				23D1A5D901B2A54BDD59D5CB /* WEGitHubService.m */,
-				23D1AB61B21C1D69239D891A /* WEGitHubService.h */,
+				23D1A5D901B2A54BDD59D5CB /* WEGithubService.m */,
+				23D1AB61B21C1D69239D891A /* WEGithubService.h */,
 				23D1A429B847B98D257AB655 /* model */,
 			);
 			path = httpclient;
@@ -330,7 +330,7 @@
 				23D1A60FC8051285A6B11D7D /* OSRequestBuilder.m in Sources */,
 				23D1A600D937B6DB648061C0 /* OSHttpClient.m in Sources */,
 				23D1A335FA99B5BF50BEFBE3 /* WEApiClient.m in Sources */,
-				23D1A2036F0C510FD7F50CFF /* WEGitHubService.m in Sources */,
+				23D1A2036F0C510FD7F50CFF /* WEGithubService.m in Sources */,
 				23D1A4EB7E50EFE01C464385 /* Repo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +343,7 @@
 				23D1A616E1B7C6BF6A583E29 /* OSRequestBuilder.m in Sources */,
 				23D1AA437076458C19110DBC /* OSHttpClient.m in Sources */,
 				23D1A12C1140CF654BAAA77C /* WEApiClient.m in Sources */,
-				23D1AAC97B28555730E2AF63 /* WEGitHubService.m in Sources */,
+				23D1AAC97B28555730E2AF63 /* WEGithubService.m in Sources */,
 				23D1AE315EA60682ED25A988 /* Repo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
