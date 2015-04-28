@@ -22,6 +22,8 @@
 @interface OSRequestBuilder : NSObject
 - (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseURLString:(NSString *) baseURLString;
 
++ (id) responseObjectFromError:(NSError *) error;
+
 - (OSRequestBuilder *) withOptions;
 
 - (OSRequestBuilder *) withGet;

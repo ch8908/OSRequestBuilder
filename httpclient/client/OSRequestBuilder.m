@@ -289,4 +289,8 @@ NSInteger const ddLogLevel = LOG_LEVEL_VERBOSE;
     return URLString;
 }
 
++ (id) responseObjectFromError:(NSError *) error {
+    return error.userInfo[kRequestResponseObjectKey];
+}
+
 @end

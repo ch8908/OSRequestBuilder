@@ -20,7 +20,7 @@
     } @catch (NSException *__unused exception) {}
 }
 
-- (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseURLString:(NSString *) baseURLString {
+- (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseApiURLString:(NSString *) baseURLString {
     self = [super init];
     if (self) {
         self.operationQueue = operationQueue;

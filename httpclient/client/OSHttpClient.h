@@ -9,7 +9,7 @@
 
 @interface OSHttpClient : NSObject
 
-- (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseURLString:(NSString *) baseURLString;
+- (instancetype) initWithQueue:(NSOperationQueue *) operationQueue baseApiURLString:(NSString *) baseURLString;
 
 - (OSRequestBuilder *) builder;
 @end

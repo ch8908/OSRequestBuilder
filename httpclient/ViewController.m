@@ -47,7 +47,7 @@
 
     self.operationQueue = operationQueue;
     OSHttpClient *client = [[OSHttpClient alloc] initWithQueue:self.operationQueue
-                                                 baseURLString:@"https://api.github.com"];
+                                              baseApiURLString:@"https://api.github.com"];
     WEApiClient *apiClient = [[WEApiClient alloc] initWithHttpClient:client];
     self.apiService = [[WEGitHubService alloc] initWithApiClient:apiClient];
 }
